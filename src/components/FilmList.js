@@ -23,18 +23,26 @@ const FilmList = (props) => {
         fetchData()
     },[])
 
-    const handleDelete = async (id) =>{
+    const handleDelete = async (e,id) =>{
+        e.stopPropagation()
         try{
            const response = await FilmsRater.delete(`/${id}`)
-           setFilms(films.filter(films=>{
-               return films.id !== id
-           }))
+           setFilms(
+               films.filter((film)=>{
+                   return film.id !==id;
+               })
+           )
           
         }catch(err){}
     }
 
-    const handleUpdate = async (id) =>{
+    const handleUpdate = async (e,id) =>{
+        e.stopPropagation()
         history.push(`/films/${id}/update`)
+    }
+
+    const handleFilmSelect = (id)=>{
+        history.push(`/films/${id}`)
     }
     return (
         <div>
@@ -43,8 +51,7 @@ const FilmList = (props) => {
                     <tr>
                         <th>Film Title</th>
                         <th>Genre</th>
-                        <th>Rating</th>
-                        <th>Edit</th>
+                        <th>Update</th>
                         <th>Delete</th>
                     </tr> 
                     </thead>
@@ -52,12 +59,11 @@ const FilmList = (props) => {
                         { 
                         films.map((films)=>{
                           return(
-                            <tr key ={films.id}>
-                            <td>{films.name}</td>
-                            <td>{films.genre}</td>
-                            <td>Reviews</td>
-                            <td><button onClick={()=>handleUpdate(films.id)}>Update</button></td>
-                            <td><button onClick={()=>handleDelete(films.id)}>Delete</button></td>
+                            <tr onClick ={()=>handleFilmSelect(films.id)} key ={films.id}>
+                            <td className ="mouse">{films.name}</td>
+                            <td className = "mouse">{films.genre}</td>
+                            <td><button onClick={(e)=>handleUpdate(e,films.id)}>Update</button></td>
+                            <td><button onClick={(e)=>handleDelete(e,films.id)}>Delete</button></td>
                         </tr>
                           )  
 

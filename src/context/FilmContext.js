@@ -4,6 +4,7 @@ export const FilmContext = createContext();
 
 export const FilmContextProvider = (props) => {
     const [films, setFilms] = useState([])
+    const [selectedFilm,setSelectedFilm] = useState(null)
     // const setFilms = () =>{
 
     // }
@@ -13,7 +14,7 @@ export const FilmContextProvider = (props) => {
     }
 
     return (
-        <FilmContext.Provider value ={{films,setFilms,addFilm}}>
+        <FilmContext.Provider value ={{films,setFilms,addFilm,selectedFilm,setSelectedFilm}}>
             {props.children}
         </FilmContext.Provider>
     )

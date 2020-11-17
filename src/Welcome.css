@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(211, 207, 207);
+}
+
+.background{
+    text-align: center;
+    font-size: larger;
+    background-image: url("./Image/theater.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 30vh;
+    color: white;
+
+   
+}
+title{
+    margin-top: 20vh;
+}
+.about{
+    text-align: center;
+    font-size: larger;
+    background-position: center;
+    background-size: cover;
+    min-height: 75%;
+}
+.shade{
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}

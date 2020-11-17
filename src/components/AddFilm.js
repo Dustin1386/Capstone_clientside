@@ -31,7 +31,13 @@ const AddFilm = () => {
                 </div>
                 <div className="col">
                     <label htmlFor="filmgenre">Film Genre:</label>
-                    <input value={genre} onChange={e => setGenre(e.target.value)} type="text"className="text-name" placeholder="Genre"/>
+                    <select value={genre} onChange={e => setGenre(e.target.value)} type="text"className="text-name" placeholder="Genre">
+                        <option value="Horror">Horror</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
+                        
+                    </select>
                 </div>
                 <div className="col">
                     <label htmlFor="filmrating">Film rating:</label>
