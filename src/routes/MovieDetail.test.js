@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import MovieDetail from './MovieDetail';
 
-describe('App', function () {
+describe('MovieDetail', function () {
 
 	it('renders without crashing', () => {
 			const div = document.createElement('div');
-			(<App />);
+		    (<MovieDetail />);
 			ReactDOM.unmountComponentAtNode(div);
 	});
 });

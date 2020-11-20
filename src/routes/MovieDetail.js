@@ -6,6 +6,7 @@ import StarRating from '../components/StarRating'
 import '../Reviews.css'
 import { FilmContext } from '../context/FilmContext'
 import AddReview from '../components/AddReview'
+import '../MovieDetail.css'
 
 const MovieDetail = () => {
     const {id} = useParams()
@@ -28,6 +29,7 @@ const MovieDetail = () => {
         <div>
             {selectedFilm && (
         <><h1>{selectedFilm.films.name}</h1>
+        <div className="avrating"><StarRating rating ={selectedFilm.films.average_rating}/></div>
             <div>
             <Reviews reviews={selectedFilm.reviews}/>
             </div>

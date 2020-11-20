@@ -21,13 +21,13 @@ const AddFilm = () => {
             console.log(err)
         }
     }
-    
+    const [rating, setRating] = useState("")
     return (
         <div className ="container">
             <form>
                 <div className="col">
                     <label htmlFor="filmname">Film Name:</label>
-                    <input value={name} onChange={e => setName(e.target.value)} type="text"className="text-name" placeholder="Name"/>
+                    <input value={name} onChange={e => setName(e.target.value)} type="text" required="required" className="text-name" placeholder="Name"/>
                 </div>
                 <div className="col">
                     <label htmlFor="filmgenre">Film Genre:</label>
@@ -41,7 +41,7 @@ const AddFilm = () => {
                 </div>
                 <div className="col">
                     <label htmlFor="filmrating">Film rating:</label>
-                    <select id="cars" name="cars">
+                    <select id="cars" name="cars" value ={rating} onChange={e => setRating(e.target.value)}>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

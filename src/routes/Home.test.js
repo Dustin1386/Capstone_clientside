@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Home from './Home';
 
-describe('App', function () {
+describe('Home', function () {
 
 	it('renders without crashing', () => {
 			const div = document.createElement('div');
-			(<App />);
+			(<Home />);
 			ReactDOM.unmountComponentAtNode(div);
 	});
 });

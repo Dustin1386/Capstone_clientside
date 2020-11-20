@@ -3,6 +3,7 @@ import '../FilmList.css'
 import FilmsRater from '../API/FilmsRater'
 import { FilmContext } from '../context/FilmContext'
 import { useHistory } from 'react-router-dom'
+import StarRating from './StarRating'
 
 const FilmList = (props) => {
     const {films, setFilms} = useContext(FilmContext)
@@ -12,9 +13,7 @@ const FilmList = (props) => {
         const fetchData = async()=>{
             try{
                 const response = await FilmsRater.get('/')
-                console.log(response)
                 setFilms(response.data.data.films)
-                console.log(response)
              }catch(err){
                 console.log("failing get",err)
              }
@@ -44,6 +43,20 @@ const FilmList = (props) => {
     const handleFilmSelect = (id)=>{
         history.push(`/films/${id}`)
     }
+    
+    const renderRating = (films) =>{
+        if(!films.count){
+            return <div>0 Reviews</div>
+        }
+         return(
+        <>
+        <StarRating rating ={films.average_rating}/>
+        <div>({films.count})</div>
+
+        </>
+       )    
+    }
+
     return (
         <div>
             <table className="table">
@@ -51,7 +64,7 @@ const FilmList = (props) => {
                     <tr>
                         <th>Film Title</th>
                         <th>Genre</th>
-                        <th>Update</th>
+                        <th>Rating</th>
                         <th>Delete</th>
                     </tr> 
                     </thead>
@@ -62,19 +75,13 @@ const FilmList = (props) => {
                             <tr onClick ={()=>handleFilmSelect(films.id)} key ={films.id}>
                             <td className ="mouse">{films.name}</td>
                             <td className = "mouse">{films.genre}</td>
-                            <td><button onClick={(e)=>handleUpdate(e,films.id)}>Update</button></td>
+                          <td className ="mouse">{renderRating(films)}</td>
                             <td><button onClick={(e)=>handleDelete(e,films.id)}>Delete</button></td>
                         </tr>
                           )  
 
                         })
-                    /* <tr>
-                        <td>Dances With Wolves</td>
-                        <td>Horror</td>
-                        <td>5</td>
-                        <td><button>Update</button></td>
-                        <td><button>Delete</button></td>
-                    </tr> */}
+                   }
                     </tbody>     
             </table>
             
