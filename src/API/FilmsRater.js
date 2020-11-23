@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: 'http://localhost:8000/api/v1/films'
+    baseURL: 'https://stormy-dusk-84915.herokuapp.com/'
 })
