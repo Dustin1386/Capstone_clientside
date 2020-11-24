@@ -9,7 +9,7 @@ This Application was built using React,Node.js,PostgreSQL and Express.
 
 
 ![](imgs/movie.png)
-![](imgs/movie1.png)
+![](imgs/movie2.png)
 
 
 
