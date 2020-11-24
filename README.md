@@ -7,7 +7,7 @@ app brings you joy with an ability to document and rate your favorite movies. To
 This Application was built using React,Node.js,PostgreSQL and Express.
 
 
-!img1(https://github.com/dustin1386/Capstone_clientside/blob/master/movierater2?raw=true)
+!img1(movie%20rater2)
 
 
 
