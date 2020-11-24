@@ -9,6 +9,7 @@ This Application was built using React,Node.js,PostgreSQL and Express.
 
 
 ![](imgs/movie.png)
+![](imgs/movie1.png)
 
 
 
@@ -18,5 +19,3 @@ This Application was built using React,Node.js,PostgreSQL and Express.
 
 
 
-
-https://github.com/Dustin1386/Capstone_clientside/blob/master/movie%20rater2.png
