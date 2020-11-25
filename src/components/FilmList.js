@@ -8,14 +8,13 @@ import StarRating from './StarRating'
 const FilmList = (props) => {
     const {films, setFilms} = useContext(FilmContext)
     let history = useHistory()
-    console.log(films)
     useEffect(()=>{
         const fetchData = async()=>{
             try{
                 const response = await FilmsRater.get('/')
                 setFilms(response.data.data.films)
              }catch(err){
-                console.log("failing get",err)
+                
              }
             
         }

@@ -14,7 +14,6 @@ import { FilmContext } from '../context/FilmContext'
     useEffect(()=>{
         const fetchData = async ()=>{
             const response = await FilmsRater.get(`/${id}`)
-            console.log(response.data.data)
             setName(response.data.data.films.name)
             setGenre(response.data.data.films.genre)
 
@@ -28,7 +27,6 @@ import { FilmContext } from '../context/FilmContext'
             name,
             genre
         })
-        console.log(updateFilm)
        history.push('/') 
        
     }

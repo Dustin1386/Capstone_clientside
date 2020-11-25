@@ -17,9 +17,9 @@ const MovieDetail = () => {
             try{
                 const response = await FilmsRater.get(`/${id}`)
             setSelectedFilm(response.data.data)
-            console.log(response)
+           
             }catch(err){
-                console.log(err)
+                
             }
             
         }
