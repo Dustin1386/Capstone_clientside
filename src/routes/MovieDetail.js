@@ -38,7 +38,7 @@ const MovieDetail = () => {
         </>   
 )}
 </div>
-    );
+    )
     }
 
 export default MovieDetail
