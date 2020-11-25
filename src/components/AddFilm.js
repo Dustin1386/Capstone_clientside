@@ -16,7 +16,7 @@ const AddFilm = () => {
                     genre: genre
                 })
                 console.log(response.data.data.films)
-             addFilm(response.data.data.films);
+             addFilm(response.data.data.films)
             }catch(err){
             console.log(err)
         }

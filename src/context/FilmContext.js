@@ -1,13 +1,10 @@
 import React, {useState, createContext} from "react"
 
-export const FilmContext = createContext();
+export const FilmContext = createContext()
 
 export const FilmContextProvider = (props) => {
     const [films, setFilms] = useState([])
     const [selectedFilm,setSelectedFilm] = useState(null)
-    // const setFilms = () =>{
-
-    // }
 
     const addFilm = (film) =>{
         setFilms([...films, film])

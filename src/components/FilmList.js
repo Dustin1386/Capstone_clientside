@@ -18,7 +18,7 @@ const FilmList = (props) => {
                 console.log("failing get",err)
              }
             
-        };
+        }
         fetchData()
     },[])
 
@@ -28,7 +28,7 @@ const FilmList = (props) => {
            const response = await FilmsRater.delete(`/${id}`)
            setFilms(
                films.filter((film)=>{
-                   return film.id !==id;
+                   return film.id !==id
                })
            )
           
