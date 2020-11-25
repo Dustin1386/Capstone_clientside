@@ -4,7 +4,7 @@ import '../AddReview.css'
 import FilmsRater from '../API/FilmsRater'
 
 const AddReview = () => {
-    const {id} = useParams();
+    const {id} = useParams()
     const location = useLocation()
     const history = useHistory()
 
@@ -50,4 +50,4 @@ const AddReview = () => {
         </div>
     )
 }
-export default AddReview;
+export default AddReview
