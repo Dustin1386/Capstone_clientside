@@ -25,7 +25,7 @@ const AddReview = () => {
             history.push(location.pathname)
 
         }catch(err){
-            console.log(err)
+            
         }
         
     }
