@@ -8,5 +8,9 @@ ReactDOM.render(
   
     <App />, document.getElementById('root')
 )
+<<<<<<< HEAD
+=======
+
+>>>>>>> 038fb829bdf0b05ec32152a9cb6adc599386f8bf
 
 
